@@ -47,7 +47,8 @@ export class SyncEngine {
 		if (needAnnotations) {
 			const writeArticle = this.settings.articleFilesEnabled && this.settings.articleFilesIncludeAnnotations;
 			const writePeriodicNote = this.settings.appendToPeriodicNote && this.settings.periodicNoteIncludeAnnotations;
-			const folder = normalizePath(`${this.settings.articleFolder}/Annotations`);
+			//const folder = normalizePath(`${this.settings.articleFolder}/Annotations`);
+			const folder = normalizePath(`${this.settings.articleFolder}`);
 			try {
 				totalSynced += await this.syncSingleStream(
 					"user/-/state/com.google/annotated",
